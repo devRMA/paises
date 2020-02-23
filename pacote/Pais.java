@@ -1,5 +1,9 @@
 package pacote;
 
+/**
+ *
+ * @author rafael
+ */
 import java.util.ArrayList;
 
 public class Pais {
@@ -12,7 +16,7 @@ public class Pais {
 		this.nome = nome;
 		this.capital = capital;
 		this.dimensoes = dimensoes;
-		fronteiras = new ArrayList<Pais>();
+		this.fronteiras = new ArrayList<Pais>();
 	}
 	
 	
@@ -24,7 +28,7 @@ public class Pais {
 	}
 	
 	public boolean adicionarFronteira(Pais pais) {
-		if (this.nome == pais.nome) {
+		if (this.nome.equals(pais.nome)) {
 			return false;
 		}
 		this.fronteiras.add(pais);

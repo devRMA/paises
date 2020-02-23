@@ -1,5 +1,10 @@
 package pacote;
 
+
+/**
+ *
+ * @author rafael
+ */
 public class Prints {
 	public static void mostrarPaisesNaFronteira(Pais primeiroPais, Pais segundoPais) {
 		if (primeiroPais.paisesNaFronteiras(segundoPais) != null) {
@@ -11,12 +16,12 @@ public class Prints {
 		System.out.println("");
 	}
 	public static void mostrarSePaisesSaoIguais(Pais primeiroPais, Pais segundoPais) {
-		System.out.println(primeiroPais.getNome() + " e " + segundoPais.getNome() + " s„o iguais?");
+		System.out.println(primeiroPais.getNome() + " e " + segundoPais.getNome() + " s√£o iguais?");
 		if(primeiroPais.equals(segundoPais)) {
 			System.out.println("Sim!");
 		}
 		else {
-			System.out.println("N„o!");
+			System.out.println("N√£o!");
 		}
 		System.out.println("");
 	}
