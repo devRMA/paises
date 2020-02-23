@@ -9,6 +9,8 @@ import pacote.Prints;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.JOptionPane;
+import static javax.swing.JOptionPane.showMessageDialog;
 public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
@@ -106,6 +108,18 @@ public class Principal extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jDialog1 = new javax.swing.JDialog();
+        jDialog2 = new javax.swing.JDialog();
+        jFrame1 = new javax.swing.JFrame();
+        jDialog3 = new javax.swing.JDialog();
+        jDialog4 = new javax.swing.JDialog();
+        jDialog5 = new javax.swing.JDialog();
+        jDialog6 = new javax.swing.JDialog();
+        jPopupMenu1 = new javax.swing.JPopupMenu();
+        jPopupMenu2 = new javax.swing.JPopupMenu();
+        jMenu1 = new javax.swing.JMenu();
+        jPopupMenu3 = new javax.swing.JPopupMenu();
+        jPopupMenu4 = new javax.swing.JPopupMenu();
         jLabel1 = new javax.swing.JLabel();
         paisN1CB = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
@@ -133,6 +147,85 @@ public class Principal extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
         jScrollPane1.setViewportView(jTextArea1);
+
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog2Layout = new javax.swing.GroupLayout(jDialog2.getContentPane());
+        jDialog2.getContentPane().setLayout(jDialog2Layout);
+        jDialog2Layout.setHorizontalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog2Layout.setVerticalGroup(
+            jDialog2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jFrame1Layout = new javax.swing.GroupLayout(jFrame1.getContentPane());
+        jFrame1.getContentPane().setLayout(jFrame1Layout);
+        jFrame1Layout.setHorizontalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jFrame1Layout.setVerticalGroup(
+            jFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog3Layout = new javax.swing.GroupLayout(jDialog3.getContentPane());
+        jDialog3.getContentPane().setLayout(jDialog3Layout);
+        jDialog3Layout.setHorizontalGroup(
+            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog3Layout.setVerticalGroup(
+            jDialog3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog4Layout = new javax.swing.GroupLayout(jDialog4.getContentPane());
+        jDialog4.getContentPane().setLayout(jDialog4Layout);
+        jDialog4Layout.setHorizontalGroup(
+            jDialog4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog4Layout.setVerticalGroup(
+            jDialog4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog5Layout = new javax.swing.GroupLayout(jDialog5.getContentPane());
+        jDialog5.getContentPane().setLayout(jDialog5Layout);
+        jDialog5Layout.setHorizontalGroup(
+            jDialog5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog5Layout.setVerticalGroup(
+            jDialog5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jDialog6Layout = new javax.swing.GroupLayout(jDialog6.getContentPane());
+        jDialog6.getContentPane().setLayout(jDialog6Layout);
+        jDialog6Layout.setHorizontalGroup(
+            jDialog6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        jDialog6Layout.setVerticalGroup(
+            jDialog6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
+        );
+
+        jMenu1.setText("jMenu1");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -169,6 +262,11 @@ public class Principal extends javax.swing.JFrame {
 
         btnFronteirasEmComun.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         btnFronteirasEmComun.setText("Ver quais fronteiras os países tem em comun");
+        btnFronteirasEmComun.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFronteirasEmComunActionPerformed(evt);
+            }
+        });
 
         btnVerTodasAsFronteiras.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         btnVerTodasAsFronteiras.setText("Listar todos os países nas fronteiras");
@@ -243,17 +341,6 @@ public class Principal extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(56, 56, 56)
-                                .addComponent(adicionarFronteiraCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(63, 63, 63)
-                                .addComponent(txtFronteira, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(202, 202, 202)
-                                .addComponent(btnAdicionarPais)))
-                        .addGap(0, 89, Short.MAX_VALUE))
-                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -261,7 +348,7 @@ public class Principal extends javax.swing.JFrame {
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                                     .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(paisN1CB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 177, Short.MAX_VALUE)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(paisN2CB, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -289,6 +376,14 @@ public class Principal extends javax.swing.JFrame {
                                 .addGap(102, 102, 102))))
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(56, 56, 56)
+                                .addComponent(adicionarFronteiraCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(63, 63, 63)
+                                .addComponent(txtFronteira, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(202, 202, 202)
+                                .addComponent(btnAdicionarPais))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(196, 196, 196)
                                 .addComponent(btnAdicionarPais1))
@@ -335,7 +430,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnAdicionarPais)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblAvisoPais, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -347,7 +442,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnAdicionarPais1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lblAvisoFronteira, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(30, Short.MAX_VALUE))
+                .addContainerGap(27, Short.MAX_VALUE))
         );
 
         pack();
@@ -410,6 +505,42 @@ public class Principal extends javax.swing.JFrame {
             lblCapital2.setText("Escolha um país!");
         }
     }//GEN-LAST:event_btnCapital2ActionPerformed
+
+    private void btnFronteirasEmComunActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFronteirasEmComunActionPerformed
+        ArrayList<String> fronteiras;
+        String item1 = paisN1CB.getSelectedItem().toString();
+        String item2 = paisN2CB.getSelectedItem().toString();
+        String itemSelecionado1 =paisN1CB.getSelectedItem().toString();
+        String itemSelecionado2 =paisN2CB.getSelectedItem().toString();
+        Pais pais1 = null;
+        Pais pais2 = null;
+        if (!item1.equals("< Selecione um país >")){
+            if (!item1.equals("< Selecione um país >")){
+                for (Pais paisSelecionado : paises){
+                    if (paisSelecionado.getNome().equals(itemSelecionado1)){
+                        int indexPais = paises.indexOf(paisSelecionado);
+                        pais1 = paises.get(indexPais);
+                        break;
+                    }
+                }
+                for (Pais paisSelecionado : paises){
+                    if (paisSelecionado.getNome().equals(itemSelecionado2)){
+                        int indexPais = paises.indexOf(paisSelecionado);
+                        pais2 = paises.get(indexPais);
+                        break;
+                    }
+                }
+                fronteiras = new ArrayList<String>();
+                for (Pais a : pais1.paisesNaFronteiras(pais2)){
+                    fronteiras.add(a.getNome());
+                }
+                if(!pais1.equals(pais2)){
+                    JOptionPane.showMessageDialog(null, "Os países que fazem fronteira com " + pais1.getNome() +" e " + pais2.getNome() + " são:" + "\n" + fronteiras);
+                    Prints.mostrarPaisesNaFronteira(pais1, pais2);
+                }
+            }
+        }
+    }//GEN-LAST:event_btnFronteirasEmComunActionPerformed
     private ArrayList<Pais> paises = new ArrayList<Pais>();
     
     public static void main(String args[]) {   
@@ -445,11 +576,23 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JToggleButton btnCapital2;
     private javax.swing.JButton btnFronteirasEmComun;
     private javax.swing.JButton btnVerTodasAsFronteiras;
+    private javax.swing.JDialog jDialog1;
+    private javax.swing.JDialog jDialog2;
+    private javax.swing.JDialog jDialog3;
+    private javax.swing.JDialog jDialog4;
+    private javax.swing.JDialog jDialog5;
+    private javax.swing.JDialog jDialog6;
+    private javax.swing.JFrame jFrame1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JMenu jMenu1;
+    private javax.swing.JPopupMenu jPopupMenu1;
+    private javax.swing.JPopupMenu jPopupMenu2;
+    private javax.swing.JPopupMenu jPopupMenu3;
+    private javax.swing.JPopupMenu jPopupMenu4;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
