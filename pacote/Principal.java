@@ -89,18 +89,6 @@ public class Principal extends javax.swing.JFrame {
         paises.add(suriname);
         paises.add(uruguai);
         paises.add(venezuela);
-        
-        Prints.mostrarPaisesNaFronteira(paises.get(paises.indexOf(brasil)), paises.get(paises.indexOf(chile)));
-        Prints.mostrarPaisesNaFronteira(paises.get(paises.indexOf(brasil)), paises.get(paises.indexOf(argentina)));
-
-        Prints.mostrarSePaisesSaoIguais(paises.get(paises.indexOf(brasil)), paises.get(paises.indexOf(brasil)));
-        Prints.mostrarSePaisesSaoIguais(paises.get(paises.indexOf(brasil)), paises.get(paises.indexOf(argentina)));
-        Prints.mostrarSePaisesSaoIguais(paises.get(paises.indexOf(chile)), paises.get(paises.indexOf(uruguai)));
-        Prints.mostrarSePaisesSaoIguais(paises.get(paises.indexOf(uruguai)), paises.get(paises.indexOf(uruguai)));
-
-        Prints.mostrarTodasAsFronteiras(paises.get(paises.indexOf(suriname)));
-        Prints.mostrarTodasAsFronteiras(paises.get(paises.indexOf(brasil)));
-        Prints.mostrarTodasAsFronteiras(paises.get(paises.indexOf(venezuela)));
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -137,12 +125,12 @@ public class Principal extends javax.swing.JFrame {
         lblCapital2 = new javax.swing.JLabel();
         btnAdicionarPais = new javax.swing.JButton();
         lblAvisoPais = new javax.swing.JLabel();
-        adicionarFronteiraCB = new javax.swing.JComboBox<>();
+        adicionarFronteira1CB = new javax.swing.JComboBox<>();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel5 = new javax.swing.JLabel();
-        txtFronteira = new javax.swing.JTextField();
         btnAdicionarPais1 = new javax.swing.JButton();
         lblAvisoFronteira = new javax.swing.JLabel();
+        adicionarFronteira2CB = new javax.swing.JComboBox<>();
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
@@ -308,14 +296,19 @@ public class Principal extends javax.swing.JFrame {
 
         btnAdicionarPais.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         btnAdicionarPais.setText("Adicionar");
+        btnAdicionarPais.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionarPaisActionPerformed(evt);
+            }
+        });
 
         lblAvisoPais.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
-        adicionarFronteiraCB.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
-        adicionarFronteiraCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um país >", "Argentina", "Bolivia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
-        adicionarFronteiraCB.addActionListener(new java.awt.event.ActionListener() {
+        adicionarFronteira1CB.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
+        adicionarFronteira1CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um país >", "Argentina", "Bolivia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
+        adicionarFronteira1CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                adicionarFronteiraCBActionPerformed(evt);
+                adicionarFronteira1CBActionPerformed(evt);
             }
         });
 
@@ -323,30 +316,28 @@ public class Principal extends javax.swing.JFrame {
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel5.setText("Adicionar Fronteira");
 
-        txtFronteira.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
-        txtFronteira.setText("País na Fronteira");
-
         btnAdicionarPais1.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         btnAdicionarPais1.setText("Adicionar");
+        btnAdicionarPais1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAdicionarPais1ActionPerformed(evt);
+            }
+        });
 
         lblAvisoFronteira.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+
+        adicionarFronteira2CB.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
+        adicionarFronteira2CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um país >", "Argentina", "Bolivia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
+        adicionarFronteira2CB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                adicionarFronteira2CBActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(adicionarFronteiraCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(63, 63, 63)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(txtFronteira, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(10, 10, 10))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(106, 106, 106)
-                .addComponent(lblAvisoFronteira, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -380,25 +371,42 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(btnVerTodasAsFronteiras, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
-                .addGap(10, 10, 10)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(0, 0, Short.MAX_VALUE)
+                        .addGap(10, 10, 10)
+                        .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(206, 206, 206)
                         .addComponent(btnAdicionarPais1)
-                        .addGap(185, 185, 185)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addGap(10, 10, 10))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lblAvisoPais, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(lblAvisoPais, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(122, 122, 122)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnAdicionarPais, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(txtCapital, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnAdicionarPais, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(txtCapital))))
                 .addGap(112, 112, 112))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(106, 106, 106)
+                .addComponent(lblAvisoFronteira, javax.swing.GroupLayout.PREFERRED_SIZE, 286, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(adicionarFronteira1CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(adicionarFronteira2CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -430,21 +438,24 @@ public class Principal extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtCapital, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnAdicionarPais, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(lblAvisoPais, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(btnAdicionarPais, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(lblAvisoPais, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 13, Short.MAX_VALUE)
+                        .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(txtCapital, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 14, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.CENTER)
-                    .addComponent(adicionarFronteiraCB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(txtFronteira, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(adicionarFronteira1CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(adicionarFronteira2CB, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnAdicionarPais1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -484,9 +495,9 @@ public class Principal extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnVerTodasAsFronteirasActionPerformed
 
-    private void adicionarFronteiraCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarFronteiraCBActionPerformed
+    private void adicionarFronteira1CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarFronteira1CBActionPerformed
 
-    }//GEN-LAST:event_adicionarFronteiraCBActionPerformed
+    }//GEN-LAST:event_adicionarFronteira1CBActionPerformed
 
     private void btnCapital1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapital1ActionPerformed
         String item = paisN1CB.getSelectedItem().toString();
@@ -565,6 +576,87 @@ public class Principal extends javax.swing.JFrame {
             }
         }
     }//GEN-LAST:event_btnFronteirasEmComunActionPerformed
+
+    private void btnAdicionarPaisActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarPaisActionPerformed
+        boolean nomeJaExiste = false;
+        boolean capitalJaExiste = false;
+        for (Pais a : paises){
+            if(txtNome.getText().equals(a.getNome())){
+                nomeJaExiste = true;
+                break;
+            }
+        }
+        for (Pais a : paises){
+            if(txtCapital.getText().equals(a.getCapital())){
+                capitalJaExiste = true;
+                break;
+            }
+        }
+        if (capitalJaExiste || nomeJaExiste){
+            lblAvisoPais.setText("Adicione dados novos!");
+            lblAvisoPais.setForeground(new java.awt.Color(255, 0, 0));
+        }
+        else{
+            lblAvisoPais.setText("");
+            lblAvisoPais.setForeground(new java.awt.Color(0, 0, 0));
+        }
+        if (! nomeJaExiste){
+            if (! capitalJaExiste){
+                Pais a = new Pais(txtNome.getText(), txtCapital.getText(), "N/D km²");
+                lblAvisoPais.setText("País adicionado com sucesso!");
+                lblAvisoPais.setForeground(new java.awt.Color(0, 150, 0));
+                txtNome.setText("Nome");
+                txtCapital.setText("Capital");
+                paises.add(a);
+                paisN1CB.addItem(a.getNome());
+                paisN2CB.addItem(a.getNome());
+                adicionarFronteira1CB.addItem(a.getNome());
+            }
+        }
+    }//GEN-LAST:event_btnAdicionarPaisActionPerformed
+
+    private void btnAdicionarPais1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAdicionarPais1ActionPerformed
+        Pais paisSelecionado1 = null;
+        Pais paisSelecionado2 = null;
+        boolean fronteirasJaExiste = false;
+        String item1 = adicionarFronteira1CB.getSelectedItem().toString();
+        String item2 = adicionarFronteira2CB.getSelectedItem().toString();
+        for (Pais a : paises){
+            if(a.getNome().equals(item1)){
+                paisSelecionado1 = a;
+                break;
+            }
+        }
+        for (Pais a : paises){
+            if(a.getNome().equals(item2)){
+                paisSelecionado2 = a;
+                break;
+            }
+        }
+        for (Pais i : paisSelecionado1.fronteiras()){
+            System.out.println(i.getNome());
+            System.out.println(paisSelecionado2.getNome());
+            System.out.println("");
+            if(i.getNome().equals(paisSelecionado2.getNome())){
+                fronteirasJaExiste = true;
+                break;
+            }
+        }
+        if (! fronteirasJaExiste){
+            lblAvisoFronteira.setText("País agora fazerem fronteiras!");
+            lblAvisoFronteira.setForeground(new java.awt.Color(0, 150, 0));
+            paisSelecionado1.adicionarFronteira(paisSelecionado2);
+            paisSelecionado2.adicionarFronteira(paisSelecionado1);
+        }
+        else{
+            lblAvisoFronteira.setText("Países já fazem fronteiras!");
+            lblAvisoFronteira.setForeground(new java.awt.Color(255, 0, 0));
+        }
+    }//GEN-LAST:event_btnAdicionarPais1ActionPerformed
+
+    private void adicionarFronteira2CBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adicionarFronteira2CBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_adicionarFronteira2CBActionPerformed
     private ArrayList<Pais> paises = new ArrayList<Pais>();
     
     public static void main(String args[]) {   
@@ -593,7 +685,8 @@ public class Principal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> adicionarFronteiraCB;
+    private javax.swing.JComboBox<String> adicionarFronteira1CB;
+    private javax.swing.JComboBox<String> adicionarFronteira2CB;
     private javax.swing.JButton btnAdicionarPais;
     private javax.swing.JButton btnAdicionarPais1;
     private javax.swing.JToggleButton btnCapital1;
@@ -628,7 +721,6 @@ public class Principal extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> paisN1CB;
     private javax.swing.JComboBox<String> paisN2CB;
     private javax.swing.JTextField txtCapital;
-    private javax.swing.JTextField txtFronteira;
     private javax.swing.JTextField txtNome;
     // End of variables declaration//GEN-END:variables
 }
