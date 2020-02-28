@@ -28,7 +28,7 @@ public class Pais {
 	}
 	
 	public boolean adicionarFronteira(Pais pais) {
-		if (this.nome.equals(pais.nome)) {
+		if (this.equals(pais)) {
 			return false;
 		}
 		this.fronteiras.add(pais);
@@ -43,12 +43,12 @@ public class Pais {
 		ArrayList<Pais> temp = new ArrayList<Pais>();
 		for (Pais i : this.fronteiras) {
 			for (Pais j : outro.fronteiras) {
-				if (i == j) {
+				if (i.equals(j)) {
 					temp.add(i);
 				}
 			}
 		}
-		return temp;
+		return temp; 
 	}
 	
 	public String getNome() {

@@ -1,31 +1,23 @@
 package pacote;
 
-
-/**
- *
- * @author rafael
- */
 import pacote.Prints;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import static javax.swing.JOptionPane.showMessageDialog;
 public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
-        Pais argentina = new Pais("Argentina", "Buenos Aires", " 2.791.810 kmÂ²");
-        Pais bolivia = new Pais("Bolivia", "La Paz", " 1.098.580 kmÂ²");
-        Pais brasil = new Pais("Brasil", "Brasilia", "8.515.767.049 kmÂ²");
-        Pais chile = new Pais("Chile", "Santiago", "756.096 kmÂ²");
-        Pais colombia = new Pais("ColÃ´mbia", "BogotÃ¡", "1.141.750 kmÂ²");
-        Pais equador = new Pais("Equador", "Quito", "256.370 kmÂ²");
-        Pais guiana = new Pais("Guiana", "Georgetown", "214.970 kmÂ²");
-        Pais paraguai = new Pais("Paraguai", "AssunÃ§Ã£o", "406.750 kmÂ²");
-        Pais peru = new Pais("Peru", "Lima", "1.285.220 kmÂ²");
-        Pais suriname = new Pais("Suriname", "Paramaribo", "163.820 kmÂ²");
-        Pais uruguai = new Pais("Uruguai", "MontevidÃ©u", "176.220 kmÂ²");
-        Pais venezuela = new Pais("Venezuela", "Caracas", "912.050 kmÂ²");
+        Pais argentina = new Pais("Argentina", "Buenos Aires", " 2.791.810 km²");
+        Pais bolivia = new Pais("Bolivia", "La Paz", " 1.098.580 km²");
+        Pais brasil = new Pais("Brasil", "Brasilia", "8.511.000 km²");
+        Pais chile = new Pais("Chile", "Santiago", "756.096 km²");
+        Pais colombia = new Pais("Colômbia", "Bogotá", "1.141.750 km²");
+        Pais equador = new Pais("Equador", "Quito", "256.370 km²");
+        Pais guiana = new Pais("Guiana", "Georgetown", "214.970 km²");
+        Pais paraguai = new Pais("Paraguai", "Assunção", "406.750 km²");
+        Pais peru = new Pais("Peru", "Lima", "1.285.220 km²");
+        Pais suriname = new Pais("Suriname", "Paramaribo", "163.820 km²");
+        Pais uruguai = new Pais("Uruguai", "Montevidéu", "176.220 km²");
+        Pais venezuela = new Pais("Venezuela", "Caracas", "912.050 km²");
 
         Pais[] fronteirasArgentina = {paraguai, bolivia, brasil, uruguai, chile, };
         Pais[] fronteirasBolivia = {argentina, chile, paraguai, brasil, peru};
@@ -85,6 +77,7 @@ public class Principal extends javax.swing.JFrame {
         paises.add(equador);
         paises.add(guiana);
         paises.add(paraguai);
+        
         paises.add(peru);
         paises.add(suriname);
         paises.add(uruguai);
@@ -219,11 +212,11 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("ExercÃ­cio sobre PaÃ­ses");
+        jLabel1.setText("Exercício sobre países");
         jLabel1.setToolTipText("");
 
         paisN1CB.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
-        paisN1CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um paÃ­s >", "Argentina", "Bolivia", "Brasil", "Chile", "ColÃ´mbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
+        paisN1CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um país >", "Argentina", "Bolivia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
         paisN1CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 paisN1CBActionPerformed(evt);
@@ -232,11 +225,11 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel2.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel2.setText("PaÃ­s 1");
+        jLabel2.setText("país 1");
         jLabel2.setToolTipText("");
 
         paisN2CB.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
-        paisN2CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um paÃ­s >", "Argentina", "Bolivia", "Brasil", "Chile", "ColÃ´mbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
+        paisN2CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um país >", "Argentina", "Bolivia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
         paisN2CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 paisN2CBActionPerformed(evt);
@@ -245,11 +238,11 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel3.setText("PaÃ­s 2");
+        jLabel3.setText("país 2");
         jLabel3.setToolTipText("");
 
         btnFronteirasEmComun.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
-        btnFronteirasEmComun.setText("Ver quais fronteiras os paÃ­ses tem em comun");
+        btnFronteirasEmComun.setText("Ver quais fronteiras os países tem em comun");
         btnFronteirasEmComun.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnFronteirasEmComunActionPerformed(evt);
@@ -257,7 +250,7 @@ public class Principal extends javax.swing.JFrame {
         });
 
         btnVerTodasAsFronteiras.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
-        btnVerTodasAsFronteiras.setText("Listar todos os paÃ­ses nas fronteiras do PaÃ­s 1");
+        btnVerTodasAsFronteiras.setText("Listar todos os países nas fronteiras do país 1");
         btnVerTodasAsFronteiras.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnVerTodasAsFronteirasActionPerformed(evt);
@@ -266,7 +259,7 @@ public class Principal extends javax.swing.JFrame {
 
         jLabel4.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Adicionar PaÃ­s");
+        jLabel4.setText("Adicionar país");
 
         txtNome.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         txtNome.setText("Nome");
@@ -290,9 +283,9 @@ public class Principal extends javax.swing.JFrame {
             }
         });
 
-        lblCapital1.setText("Selecione um paÃ­s primeiro");
+        lblCapital1.setText("Selecione um país primeiro");
 
-        lblCapital2.setText("Selecione um paÃ­s primeiro");
+        lblCapital2.setText("Selecione um país primeiro");
 
         btnAdicionarPais.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
         btnAdicionarPais.setText("Adicionar");
@@ -305,7 +298,7 @@ public class Principal extends javax.swing.JFrame {
         lblAvisoPais.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         adicionarFronteira1CB.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
-        adicionarFronteira1CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um paÃ­s >", "Argentina", "Bolivia", "Brasil", "Chile", "ColÃ´mbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
+        adicionarFronteira1CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um país >", "Argentina", "Bolivia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
         adicionarFronteira1CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adicionarFronteira1CBActionPerformed(evt);
@@ -327,7 +320,7 @@ public class Principal extends javax.swing.JFrame {
         lblAvisoFronteira.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
 
         adicionarFronteira2CB.setFont(new java.awt.Font("Consolas", 0, 11)); // NOI18N
-        adicionarFronteira2CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um paÃ­s >", "Argentina", "Bolivia", "Brasil", "Chile", "ColÃ´mbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
+        adicionarFronteira2CB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "< Selecione um país >", "Argentina", "Bolivia", "Brasil", "Chile", "Colômbia", "Equador", "Guiana", "Paraguai", "Peru", "Suriname", "Uruguai", "Venezuela" }));
         adicionarFronteira2CB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 adicionarFronteira2CBActionPerformed(evt);
@@ -478,7 +471,7 @@ public class Principal extends javax.swing.JFrame {
         String item = paisN1CB.getSelectedItem().toString();
         ArrayList<String> fronteiras;
         Pais pais = null;
-        if (!item.equals("< Selecione um paÃ­s >")){
+        if (!item.equals("< Selecione um país >")){
             for (Pais paisSelecionado : paises){
                 if (paisSelecionado.getNome().equals(item)){
                     int indexPais = paises.indexOf(paisSelecionado);
@@ -490,7 +483,7 @@ public class Principal extends javax.swing.JFrame {
             for (Pais a : pais.fronteiras()) {
                     fronteiras.add(a.getNome());
             }
-            JOptionPane.showMessageDialog(null, "Os paÃ­ses que fazem fronteira com " + pais.getNome() + ", sÃ£o:\n" + fronteiras);
+            JOptionPane.showMessageDialog(null, "Os países que fazem fronteira com " + pais.getNome() + ", são:\n" + fronteiras);
             Prints.mostrarTodasAsFronteiras(pais);
         }
     }//GEN-LAST:event_btnVerTodasAsFronteirasActionPerformed
@@ -501,7 +494,7 @@ public class Principal extends javax.swing.JFrame {
 
     private void btnCapital1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapital1ActionPerformed
         String item = paisN1CB.getSelectedItem().toString();
-        if (!item.equals("< Selecione um paÃ­s >")){
+        if (!item.equals("< Selecione um país >")){
             lblCapital1.setForeground(new java.awt.Color(0, 0, 0));
             String capital;
             String itemSelecionado =paisN1CB.getSelectedItem().toString();
@@ -509,20 +502,20 @@ public class Principal extends javax.swing.JFrame {
                 if (paisSelecionado.getNome().equals(itemSelecionado)){
                     int indexPais = paises.indexOf(paisSelecionado);
                     capital = paises.get(indexPais).getCapital();
-                    lblCapital1.setText("A Capital da(o) " + paisSelecionado.getNome() + " Ã© " + capital);
+                    lblCapital1.setText("A Capital da(o) " + paisSelecionado.getNome() + " é " + capital);
                     break;
                 }
             }
         } 
         else {
             lblCapital1.setForeground(new java.awt.Color(255, 0, 0));
-            lblCapital1.setText("Escolha um paÃ­s!");
+            lblCapital1.setText("Escolha um país!");
         }
     }//GEN-LAST:event_btnCapital1ActionPerformed
 
     private void btnCapital2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCapital2ActionPerformed
         String item = paisN2CB.getSelectedItem().toString();
-        if (!item.equals("< Selecione um paÃ­s >")){
+        if (!item.equals("< Selecione um país >")){
             lblCapital2.setForeground(new java.awt.Color(0, 0, 0));
             String capital;
             String itemSelecionado =paisN2CB.getSelectedItem().toString();
@@ -530,14 +523,14 @@ public class Principal extends javax.swing.JFrame {
                 if (paisSelecionado.getNome().equals(itemSelecionado)){
                     int indexPais = paises.indexOf(paisSelecionado);
                     capital = paises.get(indexPais).getCapital();
-                    lblCapital2.setText("A Capital da(o) " + paisSelecionado.getNome() + " Ã© " + capital);
+                    lblCapital2.setText("A Capital da(o) " + paisSelecionado.getNome() + " é " + capital);
                     break;
                 }
             }
         } 
         else {
             lblCapital2.setForeground(new java.awt.Color(255, 0, 0));
-            lblCapital2.setText("Escolha um paÃ­s!");
+            lblCapital2.setText("Escolha um país!");
         }
     }//GEN-LAST:event_btnCapital2ActionPerformed
 
@@ -549,8 +542,8 @@ public class Principal extends javax.swing.JFrame {
         String itemSelecionado2 =paisN2CB.getSelectedItem().toString();
         Pais pais1 = null;
         Pais pais2 = null;
-        if (!item1.equals("< Selecione um paÃ­s >")){
-            if (!item1.equals("< Selecione um paÃ­s >")){
+        if (!item1.equals("< Selecione um país >")){
+            if (!item1.equals("< Selecione um país >")){
                 for (Pais paisSelecionado : paises){
                     if (paisSelecionado.getNome().equals(itemSelecionado1)){
                         int indexPais = paises.indexOf(paisSelecionado);
@@ -570,7 +563,7 @@ public class Principal extends javax.swing.JFrame {
                     fronteiras.add(a.getNome());
                 }
                 if(!pais1.equals(pais2)){
-                    JOptionPane.showMessageDialog(null, "Os paÃ­ses que fazem fronteira com " + pais1.getNome() +" e " + pais2.getNome() + " sÃ£o:" + "\n" + fronteiras);
+                    JOptionPane.showMessageDialog(null, "Os países que fazem fronteira com " + pais1.getNome() +" e " + pais2.getNome() + " são:" + "\n" + fronteiras);
                     Prints.mostrarPaisesNaFronteira(pais1, pais2);
                 }
             }
@@ -602,8 +595,8 @@ public class Principal extends javax.swing.JFrame {
         }
         if (! nomeJaExiste){
             if (! capitalJaExiste){
-                Pais a = new Pais(txtNome.getText(), txtCapital.getText(), "N/D kmÂ²");
-                lblAvisoPais.setText("PaÃ­s adicionado com sucesso!");
+                Pais a = new Pais(txtNome.getText(), txtCapital.getText(), "N/D km²");
+                lblAvisoPais.setText("país adicionado com sucesso!");
                 lblAvisoPais.setForeground(new java.awt.Color(0, 150, 0));
                 txtNome.setText("Nome");
                 txtCapital.setText("Capital");
@@ -611,6 +604,7 @@ public class Principal extends javax.swing.JFrame {
                 paisN1CB.addItem(a.getNome());
                 paisN2CB.addItem(a.getNome());
                 adicionarFronteira1CB.addItem(a.getNome());
+                adicionarFronteira2CB.addItem(a.getNome());
             }
         }
     }//GEN-LAST:event_btnAdicionarPaisActionPerformed
@@ -643,13 +637,13 @@ public class Principal extends javax.swing.JFrame {
             }
         }
         if (! fronteirasJaExiste){
-            lblAvisoFronteira.setText("PaÃ­s agora fazerem fronteiras!");
+            lblAvisoFronteira.setText("país agora fazerem fronteiras!");
             lblAvisoFronteira.setForeground(new java.awt.Color(0, 150, 0));
             paisSelecionado1.adicionarFronteira(paisSelecionado2);
             paisSelecionado2.adicionarFronteira(paisSelecionado1);
         }
         else{
-            lblAvisoFronteira.setText("PaÃ­ses jÃ¡ fazem fronteiras!");
+            lblAvisoFronteira.setText("países jÃ¡ fazem fronteiras!");
             lblAvisoFronteira.setForeground(new java.awt.Color(255, 0, 0));
         }
     }//GEN-LAST:event_btnAdicionarPais1ActionPerformed
